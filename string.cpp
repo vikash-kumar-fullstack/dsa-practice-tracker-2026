@@ -172,26 +172,4 @@ using namespace std;
 // }
 
 
-// no of laser beam in a bank //leetcode question string no 2125
-// int main() {
-//     vector<string> bank = {"011001","000000","010100","001000"};
-//     int result = 0;
-//     int prev = 0; 
-//     for (auto &row : bank) {
-//         int count = 0;
-//         for (char c : row) {
-//             if (c == '1') count++;
-//         }
-
-//         if (count > 0) {
-//             if (prev > 0) {
-//                 result += prev * count;
-//             }
-//             prev = count;
-//         }
-//     }
-
-//     cout << result;
-//     return 0;
-// }
 
