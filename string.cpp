@@ -195,17 +195,3 @@ using namespace std;
 //     return 0;
 // }
 
-
-
-
-
-// void solve(int *&p){
-//     p=p+1;
-//     cout<<p;
-// }
-// int main(){
-//     int a=5;
-//     int *p=&a;
-//     cout<<p<<endl;
-//     solve(p);
-// }
