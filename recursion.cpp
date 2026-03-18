@@ -516,3 +516,92 @@ using namespace std;
 // }
 
 
+// dearrangement total no of ways so that same element does not get the same position again 
+// int count(int *arr,int size){
+//     if(size==1)return 0;
+//     if(size==2)return 1;
+//     return (size-1)*(count(arr,size-2)+count(arr,size-1));
+// }
+// int main(){
+//     int arr[]={4,2,6,8};
+//     int size=(sizeof(arr)/sizeof(arr[1]));
+//     int total_ways=count(arr,size);
+//     cout<<total_ways;
+// }
+
+
+// coloring fence in which n posts and k color in such a way that atmost two adjacent post can have same color
+// int count(int *post,int *color,int size1,int size2){
+//     if(size1==1)return size2;
+//     if(size1==2) return size2+size2*(size2-1);
+//     return (size2-1)*count(post,color,size1-2,size2)+ (size2-1)*count(post,color,size1-1,size2);
+// }
+// int main(){
+//     int post[]={1,2,3};
+//     int color[]={1,2,3};
+//     int size1=sizeof(post)/sizeof(post[0]);
+//     int size2=sizeof(color)/sizeof(color[0]);
+//     int total=count(post,color,size1,size2);
+//     cout<<total;
+// }
+
+
+// edit distance means two string have to match by operation insertion,deletion and replace
+// int edit(string st1, string st2, int i, int j) {
+//     // base cases
+//     if (i >= st1.length()) return st2.length() - j; // insert remaining
+//     if (j >= st2.length()) return st1.length() - i; // delete remaining
+
+//     if (st1[i] == st2[j]) {
+//         return edit(st1, st2, i + 1, j + 1); // no operation needed
+//     } else {
+//         // insert, delete, replace
+//         int insert_op = 1 + edit(st1, st2, i, j + 1);
+//         int delete_op = 1 + edit(st1, st2, i + 1, j);
+//         int replace_op = 1 + edit(st1, st2, i + 1, j + 1);
+
+//         return min(insert_op, min(delete_op, replace_op));
+//     }
+// }
+
+// int main() {
+//     string st1 = "horse";
+//     string st2 = "ros";
+//     int total_ways = edit(st1, st2, 0, 0);
+//     cout << total_ways << endl; // Output: 3
+// }
+
+
+
+// maximal square
+// int maximal(vector<vector<int>>&v,int i,int j,int rows,int cols,int &maxi){
+//     // base case
+//     if(i>=rows || j>=cols)return 0;
+
+//     // movement
+//     int left=maximal(v,i+1,j,rows,cols,maxi);
+//     int right=maximal(v,i,j+1,rows,cols,maxi);
+//     int diagonal=maximal(v,i+1,j+1,rows,cols,maxi);
+
+//     if(v[i][j]){
+//         int ans=1+min(left,(min(right,diagonal)));
+//         maxi=max(maxi,ans);
+//         return ans;
+//     }else{
+//         return 0;
+//     }
+// }
+// int main(){
+//     vector<vector<int>>v={
+//         {1,0,1,0,1},
+//         {0,1,1,1,1},
+//         {0,0,1,1,1},
+//         {0,0,0,0,0}
+//                 };
+//     int i=0,j=0;
+//     int rows=v.size();
+//     int cols=v[0].size();
+//     int maxi=0;
+//     int total=maximal(v,i,j,rows,cols,maxi);
+//     cout<<maxi*maxi;
+// }
