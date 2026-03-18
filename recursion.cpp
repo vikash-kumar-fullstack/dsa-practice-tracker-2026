@@ -400,3 +400,119 @@ using namespace std;
 // }
 
 
+// finding all the permutation os a string
+// void permu(string& str,int i){
+//         if(i>=str.length()){
+//         cout<<str<<endl;
+//         return;
+//     }
+//     for(int j=i;j<str.length();j++){
+//         swap(str[i],str[j]);
+//         permu(str,i+1);
+//         swap(str[i],str[j]);
+//     }
+// }
+// int main(){
+//     string str="abc";
+//     int i=0;
+//     permu(str,i);
+// }
+
+
+// rat in a maze
+// bool safe(int arr[][4],int rows,int cols,int srcx,int srcy,vector<vector<bool>>&home){
+//     if(arr[srcx][srcy]==1 && home[srcx][srcy]==false && srcx>=0 && srcx<rows && srcy>=0 && srcy<cols)return true;
+//     else return false;
+// }
+// void maze(int arr[][4],int rows,int cols,int srcx,int srcy,vector<vector<bool>>&home,string output){
+//     if(srcx==rows-1 && srcy==cols-1){
+//         cout<<output<<endl;
+//         return;
+//     }
+//     // left
+//     if(safe(arr,rows,cols,srcx,srcy-1,home)){
+//         home[srcx][srcy-1]=true;
+//         maze(arr,rows,cols,srcx,srcy-1,home,output+'L');
+//         home[srcx][srcy-1]=false;
+//     }
+//     // right
+//     if(safe(arr,rows,cols,srcx,srcy+1,home)){
+//         home[srcx][srcy+1]=true;
+//         maze(arr,rows,cols,srcx,srcy+1,home,output+'R');
+//         home[srcx][srcy+1]=false;
+//     }
+//     // top
+//     if(safe(arr,rows,cols,srcx-1,srcy,home)){
+//         home[srcx-1][srcy]=true;
+//         maze(arr,rows,cols,srcx-1,srcy,home,output+'T');
+//         home[srcx-1][srcy]=false;
+//     }
+//     // button
+//     if(safe(arr,rows,cols,srcx+1,srcy,home)){
+//         home[srcx+1][srcy]=true;
+//         maze(arr,rows,cols,srcx+1,srcy,home,output+'B');
+//         home[srcx+1][srcy]=false;
+//     }
+
+// }
+// int main(){
+//     int arr[][4]={
+//         {1,0,0,0},
+//         {1,1,0,0},
+//         {1,1,1,0},
+//         {1,1,1,1}
+//     };
+//     string output="";
+//     int rows=4,cols=4;
+//     int srcx=0,srcy=0;
+//     if(arr[0][0]==0){
+//         cout<<"no paths";
+//         return 0;
+//     }else{
+//         vector<vector<bool>>home(rows,vector<bool>(cols,false));
+//         home[0][0]=true;
+//         maze(arr,rows,cols,srcx,srcy,home,output);
+//     }
+// }
+
+
+
+
+// Maximum Sum of Non-Adjacent Elements in circular array (House Robber2)
+// int solve(vector<int>& nums, int start, int end, int index) {
+//     // base case
+//     if(index > end) return 0;
+
+//     // option 1: rob current house
+//     int option1 = nums[index] + solve(nums, start, end, index + 2);
+
+//     // option 2: skip current house
+//     int option2 = 0+ solve(nums, start, end, index + 1);
+
+//     return max(option1, option2);
+// }
+
+// int rob(vector<int>& nums) {
+//     int size = nums.size();
+
+//     // base cases
+//     if(size == 0) return 0;
+//     if(size == 1) return nums[0];
+
+//     // Case 1: exclude last house
+//     int ans1 = solve(nums, 0, size - 2, 0);
+
+//     // Case 2: exclude first house
+//     int ans2 = solve(nums, 1, size - 1, 1);
+
+//     return max(ans1, ans2);
+// }
+
+// int main() {
+//     vector<int> nums = {2, 7, 9, 3, 1};
+//     int result = rob(nums);
+//     cout << "Maximum sum of non-adjacent elements: " << result << endl;
+//     return 0;
+// }
+
+
