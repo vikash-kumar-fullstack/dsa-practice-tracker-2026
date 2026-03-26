@@ -511,3 +511,85 @@ using namespace std;
 // }
 
 
+
+// reversing the queue
+// class Queue{
+//     int front;
+//     int rear;
+//     int size;
+//     int *arr;
+// public:
+//     Queue(int size){
+//         arr=new int[size];
+//         this->front=-1;
+//         this->rear=-1;
+//         this->size=size;
+//     }
+//     int isEmpty(){
+//         if(front==-1 &&rear ==-1){
+//             return 1;
+//         }else{
+//             return 0;
+//         }
+//     }
+//     int isFull(){
+//         if(rear>=size-1){
+//             return 1;
+//         }else{
+//             return 0;
+//         }
+//     }
+//     void push(int data){
+//         if(isFull()){
+//             cout<<"cannot insert the queue is already full."<<endl;
+//         }else if(isEmpty()){
+//             front++;
+//             arr[++rear]=data;
+//         }else{
+//             arr[++rear]=data;
+//         }
+//     }
+//     void pop(){
+//         if(isEmpty()){
+//             cout<<"cannot delete from the queue is already empty."<<endl;
+//         }else if(front==rear){
+//             arr[front]=-1;
+//             front=-1;
+//             rear=-1;
+//         }else{
+//             arr[front]=-1;
+//             front++;
+//         }
+//     }
+//     int length(){
+//     if (isEmpty()) return 0;
+//     return rear - front + 1;
+//     }
+
+//     int Front(){
+//         return arr[front];
+//     }
+//     int Rear(){
+//         return arr[rear];
+//     }
+
+//     void print(){
+//         int len=length();
+//         if(len==0){
+//             cout<<"queue is empty."<<endl;
+//             return;
+//         }
+//         for(int i=0;i<len;i++){
+//             cout<<arr[i]<<" ";
+//         }
+//         cout<<endl;
+//     }
+//     void reverse(){
+//         int first=front;
+//         int last=rear;
+//         while(first<last){
+//             swap(arr[first],arr[last]);
+//             first++;
+//             last--;
+//         }
+//     }
