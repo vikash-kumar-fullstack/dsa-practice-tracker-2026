@@ -280,3 +280,71 @@ void sorting(stack<int>&st){
 //     cout<<"after sorting :";
 //     print(st);
 // }
+
+//implementing two stack using one array
+// class Stack{
+//     public:
+//     int *arr;
+//     int top1;
+//     int top2;
+//     int size;
+
+//     Stack(int size){
+//         arr=new int[size];
+//         this->top1=-1;
+//         this->top2=size;
+//         this->size=size;
+//     }
+//     void isEmpty(){
+//         if(top1==-1 || top2==size){
+//             cout<<"Underflow"<<endl;
+//         }else{
+//             cout<<"not underflow"<<endl;
+//         }
+//     }
+//     void isFull(){
+//         if(top2-top1==1){
+//             cout<<"overflow"<<endl;
+//         }else{
+//             cout<<"not overflow"<<endl;
+//         }
+//     }
+//     void push1(int data){
+//         if(top2-top1!=1){
+//             arr[++top1]=data;
+//         }
+//     }
+//     void push2(int data){
+//         if(top2-top1!=1){
+//             arr[--top2]=data;
+//         }
+//     }
+//     void pop1(){
+//         if(top1!=-1){
+//             cout<<"Popped element :"<<arr[top1--]<<endl;
+//             return;
+//         }
+//     }
+//     void pop2(){
+//         if(top2!=size){
+//             cout<<"Popped element :"<<arr[top2++]<<endl;
+//             return;
+//         }
+//     }
+
+
+// };
+// int main(){
+//     Stack st(5);
+//     st.isEmpty();
+//     st.isFull();
+//     st.push1(2);
+//     st.push2(7);
+//     st.push1(3);
+//     st.push2(6);
+//     st.push2(5);
+//     st.isFull();
+//     st.isEmpty();
+//     st.pop1();
+//     st.pop2();
+// }
