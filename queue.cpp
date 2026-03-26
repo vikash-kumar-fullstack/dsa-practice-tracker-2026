@@ -371,3 +371,54 @@ using namespace std;
 
 
 
+// circular deque
+
+// class Cdeque {
+//     int size;
+//     int *arr;
+//     int front;
+//     int rear;
+
+// public:
+//     Cdeque(int size) {
+//         this->size = size;
+//         arr = new int[size];
+//         front = -1;
+//         rear = -1;
+//     }
+
+//     bool isEmpty() {
+//         return (front == -1);
+//     }
+
+//     bool isFull() {
+//         return ((rear + 1) % size == front);
+//     }
+
+//     void push_front(int data) {
+//         if (isFull()) {
+//             cout << "Cannot insert at front (Deque is full)" << endl;
+//             return;
+//         }
+
+//         if (isEmpty()) {
+//             front = rear = 0;
+//         } else {
+//             front = (front - 1 + size) % size;
+//         }
+//         arr[front] = data;
+//     }
+
+//     void push_rear(int data) {
+//         if (isFull()) {
+//             cout << "Cannot insert at rear (Deque is full)" << endl;
+//             return;
+//         }
+
+//         if (isEmpty()) {
+//             front = rear = 0;
+//         } else {
+//             rear = (rear + 1) % size;
+//         }
+//         arr[rear] = data;
+//     }
