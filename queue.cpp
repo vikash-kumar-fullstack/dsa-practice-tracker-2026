@@ -593,4 +593,22 @@ using namespace std;
 //             last--;
 //         }
 //     }
+//     void reverse_by_recurion(){
+//         if(length()<=0){
+//             return;
+//         }
+//         int last=arr[front];
+//         pop();
+//         reverse_by_recurion();
+//         push(last);
+//     }
+//     void push_front(int data){
+//         if(front==-1 || front==0){
+//             cout<<"cannot insert"<<endl;
+//             return;
+//         }else{
+//             arr[--front]=data;
+//         }
+//     }
+
 
