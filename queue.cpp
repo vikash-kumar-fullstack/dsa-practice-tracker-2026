@@ -238,3 +238,136 @@ using namespace std;
 // }
 
 
+
+//deque
+// class Deque{
+//     int size;
+//     int *arr;
+//     int front;
+//     int rear;
+//     public:
+
+//     Deque(int size){
+//         arr=new int[size];
+//         this->size=size;
+//         this->front=-1;
+//         this->rear=-1;
+//     }
+
+//     bool isEmpty(){
+//         if(front==-1 && rear==-1){
+//             return 1;
+//         }else{
+//             return 0;
+//         }
+//     }
+//     bool isFull(){
+//         if(front==0 && rear==size-1){
+//             return 1;
+//         }else{
+//             return 0;
+//         }
+//     }
+//     void push_front(int data){
+//         if(isFull() || front==0){
+//             cout<<"cannot insert at front"<<endl;
+//         }else if(isEmpty()){
+//             front=0;
+//             rear=0;
+//             arr[front]=data;
+//         }else{
+//             front--;
+//             arr[front]=data;
+//         }
+//     }
+//     void push_rear(int data){
+//         if(isFull() || rear==size-1){
+//             cout<<"cannot insert at front"<<endl;
+//         }else if(isEmpty()){
+//             front=0;
+//             rear=0;
+//             arr[rear]=data;
+//         }else{
+//             arr[++rear]=data;
+//         }
+//     }
+//     void delete_front(){
+//         if(isEmpty()){
+//             cout<<"cannot delete from front"<<endl;
+//         }else{
+//             arr[front]=-1;
+//             front++;
+//             if(front>rear){
+//                 front=-1;
+//                 rear=-1;
+//             }
+//         }
+//     }
+//     void delete_rear(){
+//         if(isEmpty()){
+//             cout<<"cannot delete from front"<<endl;
+//         }else{
+//             arr[rear]=-1;
+//             rear--;
+//             if(front>rear){
+//                 front=-1;
+//                 rear=-1;
+//             }
+//         }
+//     }
+//     int front_top(){
+//         if(isEmpty()){
+//             cout<<"nothing in queue, queue is empty"<<endl;
+//         }else{
+//             return arr[front];
+//         }
+//     }
+//     int rear_top(){
+//         if(isEmpty()){
+//             cout<<"nothing in queue, queue is empty"<<endl;
+//         }else{
+//             return arr[rear];
+//         }
+//     }
+// };
+// int main() {
+//     Deque dq(5);  // deque of size 5
+
+//     cout << "Inserting elements at rear...\n";
+//     dq.push_rear(10);
+//     dq.push_rear(20);
+//     dq.push_rear(30);
+
+//     cout << "Front element: " << dq.front_top() << endl;
+//     cout << "Rear element: " << dq.rear_top() << endl;
+
+//     cout << "\nDeleting one element from rear...\n";
+//     dq.delete_rear();
+
+//     cout << "Front element after delete_rear: " << dq.front_top() << endl;
+//     cout << "Rear element after delete_rear: " << dq.rear_top() << endl;
+
+//     cout << "\nInserting element at front...\n";
+//     dq.push_front(5);
+
+//     cout << "Front element: " << dq.front_top() << endl;
+//     cout << "Rear element: " << dq.rear_top() << endl;
+
+//     cout << "\nDeleting one element from front...\n";
+//     dq.delete_front();
+
+//     cout << "Front element: " << dq.front_top() << endl;
+//     cout << "Rear element: " << dq.rear_top() << endl;
+
+//     cout << "\nTrying to overfill the deque...\n";
+//     dq.push_rear(40);
+//     dq.push_rear(50);
+//     dq.push_rear(60);  // should show "cannot insert at front" (overflow condition)
+
+//     return 0;
+// }
+
+
+
+
+
