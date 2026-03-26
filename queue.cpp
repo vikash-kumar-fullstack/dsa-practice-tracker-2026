@@ -125,3 +125,116 @@ using namespace std;
 // }
 
 
+// circular queue
+// class Cqueue{
+//     int front;
+//     int rear;
+//     int size;
+//     int *arr;
+// public:
+//     Cqueue(int size){
+//         arr=new int[size];
+//         this->front=-1;
+//         this->rear=-1;
+//         this->size=size;
+//     }
+//     int isEmpty(){
+//         if(front==-1 &&rear ==-1){
+//             return 1;
+//         }else{
+//             return 0;
+//         }
+//     }
+//     int isFull(){
+//         if((rear+1)%size==front){
+//             return 1;
+//         }else{
+//             return 0;
+//         }
+//     }
+//     void push(int data){
+//         if(isFull()){
+//             cout<<"cannot insert the queue is already full."<<endl;
+//         }else if(isEmpty()){
+//             front=0;
+//             arr[++rear]=data;
+//         }else{
+//             rear=(rear+1)%size;
+//             arr[rear]=data;
+//         }
+//     }
+//     void pop(){
+//         if(isEmpty()){
+//             cout<<"cannot delete from the queue is already empty."<<endl;
+//         }else if(front==rear){
+//             arr[front]=-1;
+//             front=-1;
+//             rear=-1;
+//         }else{
+//             arr[front]=-1;
+//             front=(front+1)%size;
+//         }
+//     }
+//     int length(){
+//     if (isEmpty()) return 0;
+//     return (rear - front + size) % size + 1;
+//     }
+
+//     int Front(){
+//     if (isEmpty()) {
+//         cout << "Queue is empty!" << endl;
+//         return -1;
+//     }
+//     return arr[front];
+//     }
+
+//     int Rear(){
+//         if (isEmpty()) {
+//             cout << "Queue is empty!" << endl;
+//             return -1;
+//         }
+//         return arr[rear];
+//     }
+
+
+//     ~Cqueue(){
+//     delete[] arr;
+// }
+// };
+   
+// int main(){
+//     Cqueue q(5);
+//     cout<<q.isEmpty()<<endl;
+//     cout<<q.isFull()<<endl;
+
+//     q.push(10);
+//     q.push(20);
+//     q.push(30);
+//     q.push(40);
+//     q.push(50);
+//     q.push(60);
+
+//     cout<<q.isEmpty()<<endl;
+//     cout<<q.isFull()<<endl;
+ 
+//     cout<<"the front element of queue is :"<<q.Front()<<endl;
+//     cout<<"the rear element of queue is :"<<q.Rear()<<endl;
+
+//     cout<<"the total size of queue is :"<<q.length()<<endl;
+
+//     q.pop();
+//     cout<<"the front element of queue is :"<<q.Front()<<endl;
+//     cout<<"the rear element of queue is :"<<q.Rear()<<endl;
+
+//     cout<<"the total size of queue is :"<<q.length()<<endl;
+//     q.push(100);
+//     q.pop();
+//     q.pop();
+//     q.pop();
+
+//     q.pop();
+//     cout<<q.Front()<<endl;
+//     cout<<q.Rear();
+// }
+
+
