@@ -348,3 +348,94 @@ void sorting(stack<int>&st){
 //     st.pop1();
 //     st.pop2();
 // }
+
+
+// valid parenthesis
+// int main() {
+//     string str = "({[]})";
+//     stack<char> st;
+
+//     for (int i = 0; i < str.length(); i++) {
+//         char ch = str[i];
+
+//         if (ch == '(' || ch == '{' || ch == '[') {
+//             st.push(ch);
+//         } else {
+//             if (!st.empty()) {
+//                 if ((ch == ')' && st.top() == '(') ||
+//                     (ch == '}' && st.top() == '{') ||
+//                     (ch == ']' && st.top() == '[')) {
+//                     st.pop();
+//                 } else {
+//                     cout << "invalid";   
+//                     return 0;
+//                 }
+//             } else {
+//                 cout << "invalid";      
+//                 return 0;
+//             }
+//         }
+//     }
+
+//     if (st.empty()) {
+//         cout << "valid";   
+//     } else {
+//         cout << "invalid";  
+//     }
+
+//     return 0;
+// }
+
+
+// remove redundant brackets
+// int main(){
+//     string str="b*(a+b)";
+//     stack<char>st;
+
+//     for(int i=0;i<str.length();i++){
+//         char ch=str[i];
+
+//         if (ch == '(' || ch == '{' || ch == '[' || 
+//             ch=='+' || ch=='-' || ch=='*' || ch=='/' || ch=='%') {
+//             st.push(ch);
+//         }
+//         // ✅ added: ignore alphabets and digits
+//         else if(isalnum(ch)){
+//             continue;
+//         }
+//         else{
+//             if(!st.empty()){
+//                 bool hasOperator=false;
+//                 if((ch == ')' || ch == '}' || ch == ']')){
+//                     while(!st.empty() && (st.top()=='+' || st.top()=='-' || st.top()=='*' || st.top()=='/' || st.top()=='%')){
+//                         st.pop();
+//                         hasOperator=true;
+//                     }
+//                     if(!st.empty()) st.pop();
+//                     if(!hasOperator){
+//                         cout<<"invalid";
+//                         return 0;
+//                     }
+//                 }
+//                 // ❌ removed unnecessary else that caused invalid for 'a' or 'b'
+//                 else{
+//                     cout<<"invalid";
+//                     return 0;
+//                 }
+//             }else{
+//                 cout<<"invalid";
+//                 return 0;
+//             }
+//         }
+//     }
+
+//     if(st.size()==0){
+//         cout<<"valid";
+//         return 1;
+//     }else{
+//         cout<<"invalid";
+//         return 0;
+//     }
+// }
+
+
