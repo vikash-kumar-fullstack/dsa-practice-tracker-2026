@@ -611,4 +611,36 @@ using namespace std;
 //         }
 //     }
 
+     
+
+//     }
+
+//     ~Queue(){
+//     delete[] arr;
+//     }
+// };
+   
+// int main(){
+//     Queue q(5);
+//     cout<<q.isEmpty()<<endl;
+//     cout<<q.isFull()<<endl;
+
+//     q.push(10);
+//     q.push(20);
+//     q.push(30);
+//     q.push(40);
+//     q.push(50);
+
+//     q.print();
+
+//     // q.reverse();
+//     // q.print();
+    
+//     // q.reverse_by_recurion();
+//     // q.print();
+    
+//     q.reverseFirstk_only(3);
+//     q.print();
+// }
+
 
