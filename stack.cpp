@@ -490,3 +490,87 @@ void sorting(stack<int>&st){
 // }
 
 
+// min stack by formula
+// class MinStack {
+//     stack<int> st;
+//     int minElement;
+
+// public:
+//     // Push operation
+//     void push(int x) {
+//         if(st.empty()) {
+//             st.push(x);
+//             minElement = x;
+//         }
+//         else if(x >= minElement) {
+//             st.push(x);
+//         }
+//         else {
+//             // Encode smaller value
+//             int encoded = 2 * x - minElement;
+//             st.push(encoded);
+//             minElement = x;
+//         }
+//     }
+
+//     // Pop operation
+//     void pop() {
+//         if(st.empty()) {
+//             cout << "Stack is empty!" << endl;
+//             return;
+//         }
+
+//         int topVal = st.top();
+//         st.pop();
+
+//         if(topVal < minElement) {
+//             // Restore previous min
+//             minElement = 2 * minElement - topVal;
+//         }
+//     }
+
+//     // Top operation
+//     int top() {
+//         if(st.empty()) {
+//             cout << "Stack is empty!" << endl;
+//             return -1;
+//         }
+
+//         int topVal = st.top();
+//         if(topVal >= minElement)
+//             return topVal;
+//         else
+//             return minElement; // actual top when encoded
+//     }
+
+//     // Get minimum
+//     int getMin() {
+//         if(st.empty()) {
+//             cout << "Stack is empty!" << endl;
+//             return -1;
+//         }
+//         return minElement;
+//     }
+
+//     // Check empty
+//     bool empty() {
+//         return st.empty();
+//     }
+
+// };
+
+// int main() {
+//     MinStack s;
+//     s.push(5);
+//     s.push(3);
+//     s.push(7);
+//     s.push(2);
+
+//     cout << "Current Min: " << s.getMin() << endl; // 2
+//     s.pop();
+//     cout << "After pop, Min: " << s.getMin() << endl; // 3
+//     cout << "Top element: " << s.top() << endl; // 7
+
+//     return 0;
+// }
+
