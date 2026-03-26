@@ -450,3 +450,64 @@ using namespace std;
 //             rear = (rear - 1 + size) % size;
 //         }
 //     }
+
+
+//     int front_top() {
+//         if (isEmpty()) {
+//             cout << "Deque is empty" << endl;
+//             return -1;
+//         }
+//         return arr[front];
+//     }
+
+//     int rear_top() {
+//         if (isEmpty()) {
+//             cout << "Deque is empty" << endl;
+//             return -1;
+//         }
+//         return arr[rear];
+//     }
+// };
+// int main() {
+//     Cdeque dq(5);   // Create a circular deque of size 5
+
+//     cout << " Inserting elements at rear...\n";
+//     dq.push_rear(10);
+//     dq.push_rear(20);
+//     dq.push_rear(30);
+//     dq.push_rear(40);
+
+//     cout << "Front element: " << dq.front_top() << endl;
+//     cout << "Rear element: " << dq.rear_top() << endl;
+
+//     cout << "\n Deleting two elements from front...\n";
+//     dq.delete_front();
+//     dq.delete_front();
+
+//     cout << "Front element after deletion: " << dq.front_top() << endl;
+//     cout << "Rear element after deletion: " << dq.rear_top() << endl;
+
+//     cout << "\n Inserting elements at front (wrap-around check)...\n";
+//     dq.push_front(5);
+//     dq.push_front(1);   
+
+//     cout << "Front element after inserting at front: " << dq.front_top() << endl;
+//     cout << "Rear element after inserting at front: " << dq.rear_top() << endl;
+
+//     cout << "\n Deleting one element from rear...\n";
+//     dq.delete_rear();
+
+//     cout << "Front element: " << dq.front_top() << endl;
+//     cout << "Rear element: " << dq.rear_top() << endl;
+
+//     cout << "\n Trying to insert when full...\n";
+//     dq.push_rear(50);
+//     dq.push_rear(60); 
+
+//     cout << "\n Final Front: " << dq.front_top() << endl;
+//     cout << " Final Rear: " << dq.rear_top() << endl;
+
+//     return 0;
+// }
+
+
