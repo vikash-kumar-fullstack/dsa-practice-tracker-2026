@@ -610,7 +610,16 @@ using namespace std;
 //             arr[--front]=data;
 //         }
 //     }
-
+//     queue<int>st;
+//     void reverseFirstk_only(int k){
+//         for(int i=0;i<k;i++){
+//             st.push(arr[i]);
+//             pop();
+//         }
+//         for(int i=0;i<k;i++){
+//             push_front(st.front());
+//             st.pop();
+//         }
      
 
 //     }
