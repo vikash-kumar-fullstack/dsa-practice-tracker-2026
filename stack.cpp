@@ -439,3 +439,54 @@ void sorting(stack<int>&st){
 // }
 
 
+// min stack
+// by pair storing 
+// class Stack {
+//     stack<pair<int,int>> st;
+
+// public:
+//     void push(int data) {
+//         if(st.empty()) {
+//             st.push({data, data});
+//         } else {
+//             int currentMin = min(data, st.top().second);
+//             st.push({data, currentMin});
+//         }
+//     }
+
+//     void pop() {
+//         if(!st.empty()) st.pop();
+//     }
+
+//     int top() {
+//         if(st.empty()) {
+//             cout << "Stack is empty!" << endl;
+//             return -1;
+//         }
+//         return st.top().first;
+//     }
+
+//     int getMin() {
+//         if(st.empty()) {
+//             cout << "Stack is empty!" << endl;
+//             return -1;
+//         }
+//         return st.top().second;
+//     }
+// };
+
+// int main() {
+//     Stack st;
+//     cout << st.top() << endl;       // Stack empty
+//     st.push(12);
+//     cout << st.getMin() << endl;    // 12
+//     st.push(15);
+//     cout << st.top() << endl;       // 15
+//     st.push(10);
+//     cout << st.top() << endl;       // 10
+//     cout << st.getMin() << endl;    // 10
+//     st.pop();
+//     cout << st.getMin() << endl;    // 12
+// }
+
+
