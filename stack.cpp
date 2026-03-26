@@ -255,3 +255,28 @@ void insertInSorted(stack<int>&st,int data){
 //     print(st);
 // }
 
+//sort the stack
+void sorting(stack<int>&st){
+    if(st.empty()){
+        return;
+    }
+    int temp=st.top();
+    st.pop();
+    sorting(st);
+    insertInSorted(st,temp);
+}
+// int main(){
+//     stack<int>st;
+//     st.push(0);
+//     st.push(5);
+//     st.push(3);
+//     st.push(1);
+//     st.push(4);
+
+//     cout<<"before sorting :";
+//     print(st);
+//     cout<<endl;
+//     sorting(st);
+//     cout<<"after sorting :";
+//     print(st);
+// }
