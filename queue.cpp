@@ -422,3 +422,31 @@ using namespace std;
 //         }
 //         arr[rear] = data;
 //     }
+
+//     void delete_front() {
+//         if (isEmpty()) {
+//             cout << "Cannot delete from front (Deque is empty)" << endl;
+//             return;
+//         }
+
+//         arr[front] = -1;  // optional (for visualization)
+//         if (front == rear) { // only one element
+//             front = rear = -1;
+//         } else {
+//             front = (front + 1) % size;
+//         }
+//     }
+
+//     void delete_rear() {
+//         if (isEmpty()) {
+//             cout << "Cannot delete from rear (Deque is empty)" << endl;
+//             return;
+//         }
+
+//         arr[rear] = -1; // optional
+//         if (front == rear) {
+//             front = rear = -1;
+//         } else {
+//             rear = (rear - 1 + size) % size;
+//         }
+//     }
